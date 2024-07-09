@@ -2,19 +2,23 @@ nav {
      background-color: black;
      color: #f5e7e0;
 }
+
 .navbar-nav a {
      color: #f5e7e0;
 }
+
 .navbar-nav a:hover {
      color: #ad2330;
      text-decoration: underline;
      font-weight: bold;
 }
+
 .navbar-nav a:active {
      color: #ad2330;
      text-decoration: underline;
      font-weight: bold;
 }
+
 .nav-item {
      padding: 5px 10px;
 }
