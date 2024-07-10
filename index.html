@@ -15,6 +15,7 @@
      <link rel="stylesheet" href="assets/css/nav.css">
      <link rel="stylesheet" href="assets/css/footer.css">
      <link rel="stylesheet" href="assets/css/styles.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
@@ -70,25 +71,45 @@
           </section>
 
           <section class="section about-section">
+               <div class="svg-decor">
+                 <!-- <img src="assets/images/svg/wavy-chains.svg" alt=""> -->
+               </div>
                <div class="cocky-bastard-about row">
-                    <div class="aside-content col-md-6">
-                         <div class="image-container-potrait">
-                              <img src="assets/images/potrait_image_woman.jpg" alt="">
+                 <div class="aside-content col-md-6">
+                   <div class="image-container-potrait">
+                     <img src="assets/images/potrait_image_woman.jpg" alt="">
+                   </div>
+                 </div>
+                 <div class="description col-md-6">
+                   <div class="about-section-heading">
+                     <h1>Elevating women on a higher pedestal</h1>
+                   </div>
+                   <div class="about-section-description">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam nobis, aperiam eligendi neque ex? Illo numquam iste distinctio unde tempore repellat quo alias velit ex suscipit. Quia, fugit dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, iusto? Eligendi a, nobis veniam accusantium placeat voluptatem corrupti? Adipisci tempora, possimus sed ex enim modi nisi ratione dolorum? Nisi, velit! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error veritatis, consequuntur temporibus, eius, corrupti quod debitis molestias ipsa quo veniam doloremque nobis fugiat. Incidunt sint, ipsa consequatur sed iste porro?</p>
+                   </div>
+                 </div>
+               </div>
+          </section>
+
+          <section class=" chart-section wow animate__fadeInUp">
+               <div class="chart-wrapper cocky-bastard-chart row">
+                    <div class="chart-content-description-mofo description col-md-6">
+                         <div class="chart-heading">
+                              <h1>Life is boring, kill yourself...</h1>
+                         </div>
+                         <div class="chart-description">
+                              <p>A tight noose will do the trick Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil corporis ut explicabo, animi iste nam quidem architecto voluptate modi ratione pariatur facere saepe tempora quos eaque harum repellat accusantium minima? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam minus ea blanditiis itaque quas quis maiores consectetur. Quisquam animi a ex fuga doloribus aspernatur aperiam quas fugit, veniam, nihil voluptatum?</p>
                          </div>
                     </div>
-                    <div class="description col-md-6">
-                         <div class="about-section-heading">
-                              <h1>Elevating women on a higher pedestal</h1>
-                         </div>
-                         <div class="about-section-description">
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam nobis, aperiam eligendi neque ex? Illo numquam iste distinctio unde tempore repellat quo alias velit ex suscipit. Quia, fugit dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, iusto? Eligendi a, nobis veniam accusantium placeat voluptatem corrupti? Adipisci tempora, possimus sed ex enim modi nisi ratione dolorum? Nisi, velit! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error veritatis, consequuntur temporibus, eius, corrupti quod debitis molestias ipsa quo veniam doloremque nobis fugiat. Incidunt sint, ipsa consequatur sed iste porro?</p>
-                         </div>
+                    <div class="chart-container col-md-6">
+                         <canvas id="womenLeadershipChart" width="400" height="400"></canvas>
                     </div>
                </div>
           </section>
+             
      </main>
 
-     <footer>
+     <!-- <footer>
           <div class="main-footer">
                <div class="main-footer-top">
                     <div class="main-footer-top-logo">
@@ -154,13 +175,56 @@
                <p class="copy"><b>©</b> 2024 ASIA AFRICA CHAMBER OF COMMERCE. All Rights Reserved.</p>
           </div>
           </div>
-     </footer>
+     </footer> -->
  
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
      <script src="https://kit.fontawesome.com/4df195007e.js" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
      <script src="assets/js/script.js"></script>
+
+
+     <script>
+          new WOW().init();
+     </script>
+
+<script>
+     const ctx = document.getElementById('womenLeadershipChart').getContext('2d');
+        const womenLeadershipChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [2000, 2005, 2010, 2015, 2020, 2023],
+                datasets: [{
+                    label: 'Women in Leadership (%)',
+                    data: [15, 20, 25, 30, 35, 38],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true,
+                        max: 40
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true
+                    }
+                }
+            }
+        });
+   </script>
 </body>
 
 </html>
