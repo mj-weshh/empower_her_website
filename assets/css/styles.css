@@ -24,7 +24,7 @@ body {
 }
 
 h1 {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .section {
@@ -308,7 +308,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; 
+  z-index: 0;
 }
 
 .svg-decor svg {
@@ -367,12 +367,16 @@ h1 {
   }
 }
 
-
-
 /* chart information section */
 .chart-section {
-    background-color: var(--secodary-background);
-    margin: 100px auto;
+  background-color: var(--secodary-background);
+  margin: 100px auto;
+}
+
+.chart-wrapper .chart-content-description-mofo {
+  transform: translateX(0%);
+  transition: all 1s ease-out;
+  position: relative;
 }
 
 .cocky-bastard-chart {
@@ -385,62 +389,53 @@ h1 {
 }
 
 .chart-container {
-    display: flex;
-    /* height: 700px; */
-    justify-content: center;
-    align-items: center;
-}
-
-#womenLeadershipChart {
-    width: 100%;
+  display: flex;
+  /* height: 700px; */
+  justify-content: center;
+  align-items: center;
+  transform: translateX(0%);
+  transition: all 1s ease-out;
 }
 
 .description .chart-heading h1 {
-    text-transform: uppercase;
-    font-size: 4.2em;
-    font-weight: 600px;
-    font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  font-size: 4.2em;
+  font-weight: 600px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#womenLeadershipChart {
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
-    .cocky-bastard-chart {
-        gap: 0;
-      }
+  .cocky-bastard-chart {
+    gap: 0;
+  }
 }
 @media (max-width: 768px) {
-      .chart-container {
-        margin-top: 10px;
-      }
-      .chart-container {
-        width: 350px;
-    }
+  .chart-container {
+    margin-top: 10px;
+  }
+  .chart-container {
+    width: 350px;
+  }
+  .cocky-bastard-chart {
+    margin: 0 20px;
+  }
+  .description .chart-heading h1 {
+    font-size: 3.2em;
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1024px) {
-    .section {
-      margin: 20px 40px;
-    }
+  .section {
+    margin: 20px 40px;
   }
-  
-  @media (max-width: 768px) {
-    .section {
-      margin: 20px 30px;
-    }
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin: 20px 30px;
   }
+}
