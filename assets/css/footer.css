@@ -1,11 +1,17 @@
+:root {
+     --dark-brown: #20150f;
+     --ndithi: #e8d3ca;
+     --redish: #ad2330;
+}
+
 footer {
      margin: 0 auto;
-     color: #e8d3ca;
+     color: var(--ndithi);
 }
 
 .main-footer {
-     background-color: black;
-     border-top: 1px #ad2330 solid;
+     background-color: var(--dark-brown);
+     border-top: 1px var(--redish) solid;
      align-items: center;
      display: flex;
      flex-direction: column;
@@ -51,17 +57,17 @@ footer {
      text-transform: uppercase;
      text-align: center;
      font-size: 20px;
-     color: black;
-     background-color: #e8d3ca;
+     color: var(--dark-brown);
+     background-color: var(--ndithi);
      padding: 5px 20px;
      margin-bottom: 20px;
      border-radius: 4px;
 }
 
 .main-footer-top-register a:hover {
-     color: #e8d3ca;
-     background-color: black;
-     border: #e8d3ca 1px solid;
+     color: var(--ndithi);
+     background-color: var(--dark-brown);
+     border: --ndithi 1px solid;
 }
 
 .main-footer-top-socials{
@@ -71,8 +77,8 @@ footer {
 }
 
 .main-footer-bottom {
-     background-color: #e8d3ca;
-     color: black;
+     background-color: var(--ndithi);
+     color: var(--dark-brown);
      text-align: center;
      width: 100%;
 }
@@ -95,11 +101,11 @@ footer {
 }
 
 .social-icons a{
-     color: #e8d3ca;
+     color: var(--ndithi);
 }
 
 .social-icons a:hover{
-     color: #ad2330;
+     color: var(--redish);
 }
 
 .main-footer-top-socials .social-icons li {
@@ -112,13 +118,13 @@ footer {
 
 .footer-contact a {
      text-decoration: none;
-     color: #e8d3ca;
+     color: var(--ndithi);
      padding: 5px;
 }
 
 .footer-contact a:hover {
      text-decoration: underline;
-     color: #ad2330;
+     color: var(--redish);
 }
 
 .footer-contact-item {
