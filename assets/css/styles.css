@@ -10,6 +10,7 @@
   --button-border-hover-color: #e8d3ca;
   --button-secondary-text-color: rgba(0, 0, 0, 0.7);
   --button-hover-text-color: var(--button-secondary-text-color);
+  --holy-shit-its-brown: #20150f;
 }
 
 :root {
@@ -369,7 +370,7 @@ h1 {
 
 /* chart information section */
 .chart-section {
-  background-color: var(--secodary-background);
+  background-color: var(--holy-shit-its-brown);
   margin: 100px auto;
 }
 
@@ -402,6 +403,12 @@ h1 {
   font-size: 4.2em;
   font-weight: 600px;
   font-family: "Ubuntu", sans-serif;
+  color: var(--dorky-white);
+}
+
+.chart-description p {
+    opacity: 0.8;
+    color: var(--dorky-white);
 }
 
 #womenLeadershipChart {
