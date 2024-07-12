@@ -12,6 +12,8 @@
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Indie+Flower&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="assets/css/nav.css">
      <link rel="stylesheet" href="assets/css/footer.css">
      <link rel="stylesheet" href="assets/css/styles.css">
@@ -91,6 +93,45 @@
                </div>
           </section>
 
+          <section class="showcase">
+               <div class="background-image-showcase">
+                    <div class="showcasing-design-section">
+                         <div class="container">
+                              <div class="row">
+                                   <div class="heading-title col-12">
+                                        <div class="text-container">
+                                             <h2 class="main-title">
+                                                  A touch a day keeps the <em>pervert</em> away.
+                                             </h2>
+                                             <p class="sub-title">
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dicta corporis iusto, error illo delectus aut atque iure alias aliquid quisquam in obcaecati, ad, illum enim ipsam. Dolorum, fugiat laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptates magni sint, quia molestiae beatae! Suscipit blanditiis aliquam natus laboriosam repudiandae, architecto cumque magnam, eius, aspernatur ipsam quisquam officia. Vitae?
+                                             </p>
+                                        </div>
+                                        <div class="image-container">
+                                             <img src="assets/images/siite-images/brown.jpg" alt="Sample Image">
+                                        </div>
+                                   </div>
+                                   <div class="col-12">
+                                        <div class="showcase-inner-content">
+                                             <h3 class="inner-content-desktop">
+                                                  Come on over, your purse might be stolen, wink.
+                                                  <a class="site-button more-info" href=""><span>More Info</span></a>
+                                             </h3>
+                                             <h3 class="inner-content-mobile">
+                                                  <div>Come on over, your purse might be stolen, wink.</div>
+                                                  <div class="">
+                                                       <a class="site-button more-info" href=""><span>More Info</span></a>
+                                                  </div>
+                                             </h3>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+           
+
           <section class=" chart-section wow animate__fadeInUp">
                <div class="chart-wrapper cocky-bastard-chart row">
                     <div class="chart-content-description-mofo description col-md-6">
@@ -106,7 +147,6 @@
                     </div>
                </div>
           </section>
-             
      </main>
 
      <footer>
@@ -190,41 +230,50 @@
           new WOW().init();
      </script>
 
-<script>
-     const ctx = document.getElementById('womenLeadershipChart').getContext('2d');
-        const womenLeadershipChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: [2000, 2005, 2010, 2015, 2020, 2023],
-                datasets: [{
-                    label: 'Women in Leadership (%)',
-                    data: [15, 20, 25, 30, 35, 38],
-                    backgroundColor: 'rgba(232, 211, 202, 0.2)',
-                    borderColor: 'rgba(232, 211, 202, 1)',
-                    borderWidth: 2,
-                    fill: true,
-                    tension: 0.3
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    x: {
-                        beginAtZero: true
+     <script>
+          document.addEventListener('DOMContentLoaded', () => {
+          const ctx = document.getElementById('womenLeadershipChart').getContext('2d');
+          const womenLeadershipChart = new Chart(ctx, {
+               type: 'line',
+               data: {
+                    labels: [2000, 2005, 2010, 2015, 2020, 2023],
+                    datasets: [{
+                         label: 'Women in Leadership (%)',
+                         data: [15, 20, 25, 30, 35, 38],
+                         backgroundColor: 'rgba(232, 211, 202, 0.2)',
+                         borderColor: 'rgba(232, 211, 202, 1)',
+                         borderWidth: 2,
+                         fill: true,
+                         tension: 0.3
+                    }]
+               },
+               options: {
+                    responsive: true,
+                    maintainAspectRatio: false, 
+                    scales: {
+                         x: {
+                              beginAtZero: true
+                         },
+                         y: {
+                              beginAtZero: true,
+                              max: 40
+                         }
                     },
-                    y: {
-                        beginAtZero: true,
-                        max: 40
+                    plugins: {
+                         legend: {
+                              display: true
+                         }
                     }
-                },
-                plugins: {
-                    legend: {
-                        display: true
-                    }
-                }
-            }
-        });
-   </script>
+               }
+          });
+
+          window.addEventListener('resize', () => {
+               womenLeadershipChart.resize();
+          });
+     });
+
+     </script>
+
 </body>
 
 </html>

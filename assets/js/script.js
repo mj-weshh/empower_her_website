@@ -17,6 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
      const observer = new IntersectionObserver(callback, options);
  
      // const targets = document.querySelectorAll('.image-container-potrait, .description, ..chart-content-description-mofo, .chart-container');
-     const targets = document.querySelectorAll('.image-container-potrait, .description, .chart-content-description-mofo, .chart-container');
+     const targets = document.querySelectorAll('.image-container-potrait, .description, .chart-content-description-mofo, .chart-container, .story, .showcase');
      targets.forEach(target => observer.observe(target));
  });
