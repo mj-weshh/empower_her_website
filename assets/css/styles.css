@@ -788,9 +788,21 @@ h1 {
   font-size: 5em;
   font-weight: 600;
   letter-spacing: -0.03em;
-  color: var(--creamy-inn-text-color);
+  color: var(--dorky-white);
   line-height: 1.3em;
   text-align: center;
+}
+
+.dot-background {
+  background-image: url('assets/images/Addons/dots-04.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
 }
 
 .speaker-carousel {
@@ -798,6 +810,8 @@ h1 {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
+  position: relative; 
+  z-index: 2;
 }
 
 .speaker-content {
@@ -826,7 +840,7 @@ h1 {
 
 .speaker-info {
   flex: 2;
-  color: var(--creamy-inn-text-color);
+  color: var(--dorky-white);
   padding-left: 20px;
   transition: opacity 2s ease-in-out;
   margin-top: 20px;
@@ -834,21 +848,23 @@ h1 {
 
 .speaker-name {
   font-size: 2.7em;
+  font-family: var(--primary-heading-font-family);
   margin: 10px 0;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .speaker-title {
-  font-size: 1.8em;
-  font-weight: 600;
-  color: var(--creamy-inn-text-color);
+  font-size: 1.4em;
+  font-weight: 500;
+  font-family: var(--primary-heading-font-family);
+  color: var(--dorky-white);
   margin-bottom: 10px;
 }
 
 .speaker-bio {
-  font-size: 1.3em;
-  font-weight: 500;
-  color: var(--creamy-inn-text-color);
+  font-size: 1em;
+  font-weight: 300;
+  color: rgb(232, 211, 202, 0.8);
   margin-bottom: 0;
   opacity: 0.8;
 }
@@ -892,21 +908,24 @@ h1 {
 
 .nav-btn {
   display: flex;
-  background-color: var(--creamy-inn-text-color);
-  border: none;
+  background-color: transparent;
+  border: var(--dorky-white) solid 1.5px;
   border-radius: 50%;
-  color: var(--holy-shiet-its-brown);
+  color: var(--dorky-white);
   font-size: 1.2em;
   font-weight: 600;
   padding: 15px 15px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.4s ease;
   justify-content: center;
   align-items: center;
 }
 
 .nav-btn:hover {
   background-color: var(--dorky-white);
+  color: var(--holy-shiet-its-brown);
+  transform: scale(1.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .prev-btn {
