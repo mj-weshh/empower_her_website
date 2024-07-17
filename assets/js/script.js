@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     const observer = new IntersectionObserver(callback, options);
     const targets = document.querySelectorAll(
-      ".image-container-potrait, .description, .chart-content-description-mofo, .chart-container, .story, .showcase, .speaker"
+      ".image-container-potrait, .description, .chart-content-description-mofo, .chart-container, .story, .showcase, .speaker, .pointer-row"
     );
     targets.forEach((target) => observer.observe(target));
   
