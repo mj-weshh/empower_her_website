@@ -1223,7 +1223,7 @@ h1 {
     width: 50%;
   }
   .pointer-image {
-    margin-bottom: -50px; /* Adjust negative margin to overlap */
+    margin-bottom: -50px; 
   }
 }
 
@@ -1242,7 +1242,7 @@ h1 {
   .pointer-image {
     display: none;
     max-width: 100%;
-    margin-bottom: -50px; /* Adjust negative margin to overlap */
+    margin-bottom: -50px; 
   }
   .text-inner {
     margin: 0 40px;
@@ -1264,3 +1264,52 @@ h1 {
     margin: 0 40px;
   }
 }
+
+
+
+/* Start of the partners section */
+.partners {
+  background-color: var(--body-theme);
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.partner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.partners-carousel {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.partners-carousel img {
+  max-height: 40px; 
+  margin: 0 20px; 
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.partners-carousel img:hover {
+  filter: grayscale(0);
+}
+
+.carousel-wrapper {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  width: calc(200%); 
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
